@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: istio-operator-boot
+  name: argocd-crd-boot
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "-1"
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   destination:
     namespace: default
@@ -14,7 +14,7 @@ spec:
     helm:
       valueFiles:
       - values.yaml
-    path: cluster-charts/istio-operator-boot
+    path: cluster-charts/argocd-crd-boot
     repoURL: https://github.com/AlexsJones/argocd-istio-bootstrap.git
     targetRevision: HEAD
   syncPolicy:
