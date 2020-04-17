@@ -13,17 +13,9 @@ spec:
     repoURL: https://github.com/istio/istio.git
     targetRevision: HEAD
     path: manifests/charts/istio-operator
-
     helm:
-      parameters:
-        - name: "hub"
-          value: "docker.io/istio"
-        - name: "tag"
-          value: "1.6-dev"
-        - name: "operatorNamespace"
-          value: "istio-operator"
-        - name: "istioNamespace"
-          value: "istio-system"
+      valueFiles:
+      - values.yaml
 
   destination:
     namespace: istio-operator
