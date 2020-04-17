@@ -5,10 +5,3 @@ metadata:
   namespace: istio-system
 spec:
   profile: demo
-  addonComponents:
-    prometheus:
-      enabled: true
-  values:
-    global:
-      k8sIngress:
-        enabled: true
