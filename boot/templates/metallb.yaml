@@ -13,6 +13,9 @@ spec:
   source:
     chart: metallb
     helm:
+      parameters:
+        - name: "arpAddresses"
+          value: "192.168.16.240/30"
       valueFiles:
       - values.yaml
     repoURL: https://kubernetes-charts.storage.googleapis.com/
