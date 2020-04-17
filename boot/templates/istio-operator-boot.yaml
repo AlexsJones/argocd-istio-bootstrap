@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: application-boot
+  name: istio-operator-boot
   namespace: argocd
 spec:
   destination:
@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles:
       - values.yaml
-    path: boot
+    path: istio-operator-boot
     repoURL: https://github.com/AlexsJones/argocd-istio-bootstrap.git
     targetRevision: HEAD
   syncPolicy:

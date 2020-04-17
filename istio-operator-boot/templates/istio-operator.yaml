@@ -1,0 +1,14 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  name: istio-control-plane
+  namespace: istio-system
+spec:
+  profile: default
+  addonComponents:
+    prometheus:
+      enabled: true
+  values:
+    global:
+      k8sIngress:
+        enabled: true
