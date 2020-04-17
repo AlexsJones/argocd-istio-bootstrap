@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: istio-operator-boot
   namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 spec:
   destination:
     namespace: default
