@@ -11,7 +11,7 @@ spec:
     server: {{ .Values.cluster }}
   project: default
   source:
-    chart: stable/metallb
+    chart: metallb
     helm:
       valueFiles:
       - values.yaml
